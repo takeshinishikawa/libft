@@ -5,7 +5,7 @@ char	*ft_strrchr(const char *s, int c)
 	const char	*temp;
 
 	temp = NULL;
-	if (!s)
+	if (!s || !c)
 		return ((char *)s);
 	while (*s)
 	{
