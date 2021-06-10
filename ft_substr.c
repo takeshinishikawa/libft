@@ -9,7 +9,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	counter = 0;
 	needle = 0;
-	if (s == NULL)
+	if (!s)
 		return (NULL);
 	s_size = ft_strlen(s);
 	while (start < s_size && counter < len && s[start + counter] != '\0')
