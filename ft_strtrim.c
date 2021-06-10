@@ -2,7 +2,7 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	len;
+	int	len;
 
 	if (s1 == NULL || set == NULL)
 		return (0);

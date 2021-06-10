@@ -43,6 +43,6 @@ fclean: clean
 
 re: 	fclean all
 
-rebonus: fclean bonusSS
+rebonus: fclean bonus
 
 .PHONY: all clean fclean re bonus rebonus
