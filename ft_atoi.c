@@ -27,7 +27,8 @@ int	ft_atoi(const char *str)
 	{
 		if (num * signal >= LONG_MAX / 10 && (*str - '0') > LONG_MAX % 10)
 			return ((int)LONG_MAX);
-		else if (num * signal <= LONG_MIN && (*str - '0') > LONG_MIN % 10)
+		else if (num * signal <= LONG_MIN / 10
+			 && (*str - '0') > -(LONG_MIN % 10))
 			return ((int)LONG_MIN);
 		num = (num * 10) + (*str - '0');
 		str++;
