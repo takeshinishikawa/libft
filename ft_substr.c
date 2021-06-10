@@ -9,12 +9,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	counter = 0;
 	needle = 0;
-	if (!s)
+	if (s == NULL)
 		return (NULL);
 	s_size = ft_strlen(s);
 	while (start < s_size && counter < len && s[start + counter] != '\0')
 		counter++;
-	substr = (char *)malloc(s_size + 1);
+	substr = malloc(sizeof(char) * (counter + 1));
 	if (substr == NULL)
 		return (NULL);
 	while (needle < counter)
