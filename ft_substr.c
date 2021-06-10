@@ -8,19 +8,20 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	s_size;
 
 	counter = 0;
-	needle = start;
+	needle = 0;
 	if (s == NULL)
 		return (NULL);
 	s_size = ft_strlen(s);
+	while (start < s_size && counter < len && s[start + counter] != '\0')
+		counter++;
 	substr = (char *)malloc(s_size + 1);
 	if (substr == NULL)
 		return (NULL);
-	while (start < s_size && counter < len && s[start + s_size] != '\0')
+	while (needle < counter)
 	{
-		substr[counter] = s[needle];
-		counter++;
+		substr[needle] = s[start + needle];
 		needle++;
 	}
-	substr[counter] = '\0';
+	substr[needle] = '\0';
 	return (substr);
 }
