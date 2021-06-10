@@ -15,7 +15,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr = (char *)malloc(s_size + 1);
 	if (substr == NULL)
 		return (NULL);
-	while (start < s_size && counter < ft_strlen(s) && counter < len)
+	while (start < s_size && counter < len && s[start + s_size] != '\0')
 	{
 		substr[counter] = s[needle];
 		counter++;
